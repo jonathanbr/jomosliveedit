@@ -14,7 +14,8 @@ window.JLE={
 	feelElements:function(){
 		if(typeof this.elements == 'undefined') return;
 		var cEl,cId,cVa;
-		for(var x=0;x<this.elements.length;x++){
+		var total_elements = this.elements.length;
+		for(var x=0;x<total_elements;x++){
 			cEl = this.elements[x];
 			cId = cEl.getAttribute('data-jid');
 			cVa = this.data[cId];
@@ -24,7 +25,8 @@ window.JLE={
 	toggleEditable:function(){
 		var cEl,outlinestyle;
 		if(this.editable) outlinestyle = ''; else outlinestyle = '1px dashed red';
-		for(var x=0;x<this.elements.length;x++){
+		var total_elements = this.elements.length;
+		for(var x=0;x<total_elements;x++){
 			cEl = this.elements[x];
 			cEl.style.outline = outlinestyle;
 			cEl.setAttribute('contenteditable',!this.editable);	
